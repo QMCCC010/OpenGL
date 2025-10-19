@@ -28,6 +28,7 @@ int main(void)
 
     std::cout << glGetString(GL_VERSION) << std::endl;
 
+    // 创建并绑定顶点缓冲区
     float positions[6] = {
         -0.5f, -0.5f,
          0.0f,  0.5f,
@@ -38,6 +39,7 @@ int main(void)
     glBindBuffer(GL_ARRAY_BUFFER, buffer);
     glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float), positions, GL_STATIC_DRAW);
 
+    // 告诉OpenGL顶点属性及分布规则
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
 
