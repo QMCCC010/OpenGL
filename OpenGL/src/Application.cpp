@@ -2,6 +2,15 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
+static unsigned int CompileShader(const std::string& source, unsigned int type) {
+
+}
+
+static int CreateShader(const std::string& vertexShader, const std::string& fragmentShader) {
+    unsigned int program = glCreateProgram();
+    unsigned int vs = glCreateShader(GL_VERTEX_SHADER);
+}
+
 int main(void)
 {
     GLFWwindow* window;
